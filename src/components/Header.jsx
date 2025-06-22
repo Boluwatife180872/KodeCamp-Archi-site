@@ -59,21 +59,33 @@ export default function Header() {
 
         <nav className={`mobile-nav ${isMenuOpen ? "open" : ""}`}>
           <div className="mobile-nav-links">
-            <a href="#about" className="nav-link">
+            <ScrollLink
+              className="nav-link"
+              to="about"
+              href="#about"
+              smooth={true}
+              duration={500}
+            >
               ABOUT
-            </a>
-            <a href="#gallery" className="nav-link">
+            </ScrollLink>
+            <RouterLink className="nav-link" to={"/gallery"}>
               GALLERY
-            </a>
-            <a href="#projects" className="nav-link">
+            </RouterLink>
+            <RouterLink className="nav-link" to={"/projects"}>
               PROJECTS
-            </a>
+            </RouterLink>
             <a href="#certifications" className="nav-link">
               CERTIFICATIONS
             </a>
-            <a href="#contacts" className="nav-link">
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              href="#contacts"
+              className="nav-link"
+            >
               CONTACTS
-            </a>
+            </ScrollLink>
           </div>
         </nav>
       </div>
